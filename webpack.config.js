@@ -12,7 +12,12 @@ module.exports = {
         path: path.resolve(__dirname, "dist")
     }, 
 
-    resolve: {
-        extensions: [".js", ".json"]
+    devServer: {
+        static: {
+            directory: path.join(__dirname, "dist")
+            },
+        port: 3000,
+        open: true,
+        liveReload: true,
     }
 }
