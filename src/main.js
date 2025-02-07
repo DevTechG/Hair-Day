@@ -3,5 +3,8 @@
 // Importar configuração do dayjs
 import "./libs/dayjs"
 
-// CSS
+// Importando o CSS
 import "./styles/index.css"
+
+// Importando arquivos JS
+import "./modules/form/submit.js"
