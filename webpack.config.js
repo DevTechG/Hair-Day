@@ -1,5 +1,6 @@
 const path = require("path")
 const HTMLWebpack = require("html-webpack-plugin")
+const copyWebpackPlugin = require("copy-webpack-plugin")
 
 module.exports = {
     target: "web",
@@ -24,7 +25,25 @@ module.exports = {
 
     plugins: [
         new HTMLWebpack({
-            template: path.resolve(__dirname, "index.html")
+            template: path.resolve(__dirname, "index.html"),
+            favicon: path.resolve("src","assets","scissors.svg")
+        }),
+        new copyWebpackPlugin({
+            patterns: [
+                {
+                    from: path.resolve(__dirname, "src", "assets"),
+                    to: path.resolve(__dirname, "dist", "src", "assets")
+                }
+            ]
         })
-    ]
+    ],
+
+    module: {
+        rules: [
+            {
+                test: /\.css$/,
+                use: ["style-loader", "css-loader"]
+            },
+        ],
+    },
 }
