@@ -8,3 +8,4 @@ import "./styles/index.css"
 
 // Importando arquivos JS
 import "./modules/form/submit.js"
+import "./modules/page-load.js"
