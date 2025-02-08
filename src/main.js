@@ -7,5 +7,6 @@ import "./libs/dayjs"
 import "./styles/index.css"
 
 // Importando arquivos JS
-import "./modules/form/submit.js"
 import "./modules/page-load.js"
+import "./modules/form/submit.js"
+import "./modules/form/date-change.js"

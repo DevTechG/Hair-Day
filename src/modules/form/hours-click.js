@@ -1,5 +1,5 @@
 export function hoursClick() {
-    const hours = document.querySelectorAll(".()hour-available")
+    const hours = document.querySelectorAll(".hour-available")
     
     hours.forEach((available) => {
         available.addEventListener("click", (selected) => {
